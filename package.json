@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-picture-swipe": "^2.0.2",
+    "vue-responsive-video-background-player": "^1.1.2",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

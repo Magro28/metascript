@@ -1,7 +1,14 @@
 <template>
   <div class="art">
-    <h1>This is an Art page</h1>
-    <vue-picture-swipe :items="items"></vue-picture-swipe>
+    <h1>This is an Art page</h1>   
+   <video-background 
+    src="../assets/vid/hd0983.mp4"
+    style="max-height: 400px; height: 100vh;"
+    overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)"
+ >
+      <h1 style="color: white;">Hello welcome!</h1>
+      <vue-picture-swipe :items="items"></vue-picture-swipe>
+  </video-background>
   </div>
 </template>
 <script>
