@@ -21,8 +21,8 @@
     data() {
       return {
         items: [{
-          src: '../assets/art/savanna.png',
-          thumbnail: '../assets/art/savannaThumb.png',
+          src: '../assets/art/Savanna.png',
+          thumbnail: '../assets/art/SavannaThumb.png',
           w: 1366,
           h: 1024,
           title: 'Savanna Sunset by Mario Groß'
