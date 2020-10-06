@@ -1,7 +1,7 @@
 <template>
   <div class="art">
   <video-background 
-    src="../assets/vid/savanna.mp4"
+    src="../assets/vid/Savanna.mp4"
     style="max-height: 600px; height: 100vh;"
  >
  <!-- overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)" -->
