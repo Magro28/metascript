@@ -9,17 +9,25 @@
           <p>Have fun, Mario</p>
           
 
-          <button @click="showModal = true"><img alt="Laptop" src="../assets/laptop.jpg"></button>
-
-          <vue-final-modal v-model="showModal">
-            <button @click="showModal = false">close terminal</button>
+          <button class="vfm-btn" @click="showModal = true">Open modal</button>
+          <div>
+            <vue-final-modal
+              v-model="showModal"
+              classes="modal-container"
+              content-class="modal-content"
+            >
+              <span class="modal__title">Hello, vue-final-modal</span>
+            </vue-final-modal>
+            
+          </div>
+          <div align="left">
             <v-shell
               :banner="banner"
               :shell_input="send_to_terminal"
               :commands="commands"
               @shell_output="prompt"
           ></v-shell>
-          </vue-final-modal>
+          </div>
   </div>
 </template>
 
@@ -40,26 +48,20 @@
       showModal: false,
       send_to_terminal: "",
       banner: {
-        header: "Vue Shell",
-        subHeader: "Shell is power just enjoy 🔥",
+        header: "Metascript Bash 9000",
+        subHeader: "In the midst of chaos, there is also opportunity",
         helpHeader: 'Enter "help" for more information.',
         emoji: {
-            first: "🔅",
-            second: "🔆",
+            first: "+",
+            second: "-",
             time: 750
         },
-        sign: "VueShell $",
-        img: {
-            align: "left",
-            link: "/mylogo.png",
-            width: 100,
-            height: 100
-        }
+        sign: "mgross~$",
       },
       commands: [
         { name: "info",
           get() {
-            return `<p>With ❤️ By Salah Bentayeb @halasproject.</p>`;
+            return `<p>no meaningfull comments are written in this code.</p>`;
         }
         },
         {
@@ -67,8 +69,21 @@
           get() {
             return navigator.appVersion;
           }
-        }
-      ]
+        },
+        {
+        name: "status",
+        get(){
+          return `kubectl get pods
+          NAME                                        READY     STATUS    RESTARTS   AGE
+          neo4j-deployment-1006230814-6winp           1/1       Running   0          53d
+          kafka-deployment-1006230814-fmgu3           1/1       Running   0          7d
+          spark-3.0.1-deployment-1370807587-6ekbw     1/1       Running   0          4d
+          nginx-deployment-1370807587-fg172           0/1       Pending   0          4m
+          rootkit-deployment-1370807587-fz9sd         0/1       Pending   4          1m
+          
+          `
+        }      
+      }]
     };
   },
   methods: {
@@ -80,3 +95,31 @@
   }
 };
 </script>
+
+<style scoped>
+::v-deep .modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::v-deep .modal-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.modal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+</style>
+
+<style scoped>
+.dark-mode div::v-deep .modal-content {
+  border-color: #2d3748;
+  background-color: #1a202c;
+}
+</style>
