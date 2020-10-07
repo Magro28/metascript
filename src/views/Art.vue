@@ -1,17 +1,21 @@
 <template>
   <div class="art">
-  <video-background 
-    src="../assets/vid/Savanna.mp4"
-    style="max-height: 600px; height: 100vh;"
- >
- <!-- overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)" -->
-      <h1 style="color: white;">Hello welcome to my little art section!</h1>
-      <vue-picture-swipe :items="items"></vue-picture-swipe>
-       <p style="color: white;">Drawing is just one of my other hobbies I do when I'm in the mood.
-         Usually I fiddle around with ProCreate on my Ipad, sometimes I'm crazy and use real tools in the real world like my pencil set. 
-       </p>
-       <p>So here are some of my works. Hove fun!</p>
-  </video-background>
+        <video-background 
+          src="../assets/vid/Savanna.mp4"
+          loop=false
+          style="max-height: 600px; height: 100vh;max-width: 2000px;"
+          :sources="[
+              {src: '../assets/vid/Savanna.mp4', loop: false}
+          ]"
+      >
+      <!-- overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)" -->
+            <h1 style="color: white;">Hello welcome to my little art section!</h1>
+            <vue-picture-swipe :items="items"></vue-picture-swipe>
+            <p style="color: white;">Drawing is just one of my other hobbies I do when I'm in the mood.
+              Usually I fiddle around with ProCreate on my Ipad, sometimes I'm crazy and use real tools in the real world like my pencil set. 
+            <br/>
+            So here are some of my works. Have fun!</p>
+        </video-background>
   </div>
 </template>
 <script>
