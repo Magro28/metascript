@@ -7,7 +7,7 @@
           I've a lot of todos and ideas but for now I just want to deploy the site.<br/>
           Have fun, Mario
         </p>
-       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="50%" width="50%">
+       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="60%" width="60%">
         <br/>
         <!-- <button class="vfm-btn" @click="showModal = true">Open modal</button>
         <div>
@@ -20,7 +20,8 @@
           </vue-final-modal>
           
         </div> -->
-        <div align="left">
+        <img src="../assets/terminal.png" @click="toggleShell();">
+        <div id="shell" align="left" style="display: none;">
           <v-shell
             :banner="banner"
             :shell_input="send_to_terminal"
@@ -89,9 +90,18 @@
       if (value == "node -v") {
         this.send_to_terminal = process.versions.node;
       }
+    },
+    toggleShell() {
+      var sh = document.getElementById("shell");
+      if (sh.style.display === "none") {
+        sh.style.display = "block";
+      } else {
+        sh.style.display = "none";
+      }
     }
   }
-};
+  
+}
 </script>
 
 <style scoped>

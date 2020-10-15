@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <row container gutter="12">
-        <column xs="2" md="2" lg="2">
+    <row id="headrow" container gutter="12">
+        <column xs="1" md="1" lg="1">
           
         </column>
         <column xs="8" md="8" lg="8">
@@ -11,8 +11,10 @@
               <router-link to="/about">About</router-link>
             </div>
         </column>
-        <column xs="2" md="2" lg="2">
-           <img alt="Me logo" src="./assets/me2roundsmall.png" height="70px" width="70px">
+        <column xs="3" md="3" lg="3">
+          <div id="rightcol">
+            <img alt="Me logo" src="./assets/me2roundsmall.png" height="60px" width="60px">
+          </div>
         </column>
       
     </row>
@@ -29,13 +31,21 @@
   color: #2c3e50;
 }
 
+#headrow {
+  background-color: #2c3e50
+}
+
+#rightcol {
+  padding: 15px;
+}
+
 #nav {
   padding: 30px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #dddddd;
 }
 
 #nav a.router-link-exact-active {
