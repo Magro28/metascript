@@ -1,14 +1,18 @@
 <template>
   <div class="home">
+    
           <h1> Welcome to Metascript </h1>
           <p>
             At the moment this page is just a place where I experiement with some web frameworks and try out new stuff.
             I've a lot of todos and ideas but for now I just want to deploy the site.
           </p>
-          <img alt="Me logo" src="../assets/me2.jpg">
+        
           <p>Have fun, Mario</p>
-          
-
+      
+      <!-- <div style="background: url(./assets/nerdnetwork.svg);background-position:center;background-size: 300px; background-repeat: no-repeat">
+      </div>  -->
+       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="400px" width="400px">
+        <img alt="Me logo" src="../assets/me2round.png" height="400px" width="400px">
           <button class="vfm-btn" @click="showModal = true">Open modal</button>
           <div>
             <vue-final-modal
