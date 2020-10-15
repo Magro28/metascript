@@ -1,51 +1,45 @@
 <template>
   <div class="home">
     
-          <h1> Welcome to Metascript </h1>
-          <p>
-            At the moment this page is just a place where I experiement with some web frameworks and try out new stuff.
-            I've a lot of todos and ideas but for now I just want to deploy the site.
-          </p>
-        
-          <p>Have fun, Mario</p>
-      
-      <!-- <div style="background: url(./assets/nerdnetwork.svg);background-position:center;background-size: 300px; background-repeat: no-repeat">
-      </div>  -->
-       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="400px" width="400px">
-        <img alt="Me logo" src="../assets/me2round.png" height="400px" width="400px">
-          <button class="vfm-btn" @click="showModal = true">Open modal</button>
-          <div>
-            <vue-final-modal
-              v-model="showModal"
-              classes="modal-container"
-              content-class="modal-content"
-            >
-              <span class="modal__title">Hello, vue-final-modal</span>
-            </vue-final-modal>
-            
-          </div>
-          <div align="left">
-            <v-shell
-              :banner="banner"
-              :shell_input="send_to_terminal"
-              :commands="commands"
-              @shell_output="prompt"
-          ></v-shell>
-          </div>
+        <h1> Welcome to Metascript </h1>
+        <p>
+          At the moment this page is just a place where I experiement with some web frameworks and try out new stuff.
+          I've a lot of todos and ideas but for now I just want to deploy the site.<br/>
+          Have fun, Mario
+        </p>
+       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="50%" width="50%">
+        <br/>
+        <!-- <button class="vfm-btn" @click="showModal = true">Open modal</button>
+        <div>
+          <vue-final-modal
+            v-model="showModal"
+            classes="modal-container"
+            content-class="modal-content"
+          >
+            <span class="modal__title">Hello, vue-final-modal</span>
+          </vue-final-modal>
+          
+        </div> -->
+        <div align="left">
+          <v-shell
+            :banner="banner"
+            :shell_input="send_to_terminal"
+            :commands="commands"
+            @shell_output="prompt"
+        ></v-shell>
+        </div>
   </div>
 </template>
 
 <script>
-  import { VueFinalModal } from 'vue-final-modal'
+  //import { VueFinalModal } from 'vue-final-modal'
   import Vue from "vue";
   import shell from 'vue-shell'
   Vue.use(shell);
 
-  Vue.use(shell);
-
   export default {
     components: {
-      VueFinalModal
+      //VueFinalModal
     },
     data() {
     return {
