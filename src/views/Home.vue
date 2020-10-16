@@ -7,7 +7,10 @@
           I've a lot of todos and ideas but for now I just want to deploy the site.<br/>
           Have fun, Mario
         </p>
-       <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="60%" width="60%">
+        <div class="svginside" style="max-width:480px">
+          <img src="../assets/Nerdnetwork.svg" height="100%" width="100%"/>
+      </div>
+       <!-- <img alt="nerd logo" src="../assets/Nerdnetwork.svg" height="auto" width="auto"> -->
         <br/>
         <!-- <button class="vfm-btn" @click="showModal = true">Open modal</button>
         <div>
@@ -106,7 +109,6 @@
   
 }
 </script>
-
 <style scoped>
 ::v-deep .modal-container {
   display: flex;
@@ -126,11 +128,19 @@
   font-size: 1.5rem;
   font-weight: 700;
 }
-</style>
-
-<style scoped>
 .dark-mode div::v-deep .modal-content {
   border-color: #2d3748;
   background-color: #1a202c;
+}
+.svginside {
+  position:relative;
+  margin-left:auto; margin-right: auto;
+}
+
+.svginside svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 </style>
