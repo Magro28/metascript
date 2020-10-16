@@ -25,7 +25,7 @@
         </div> -->
         <img src="../assets/terminal.png" @click="toggleShell();">
         <div id="shell" align="left" style="display: none;">
-          <v-shell
+          <v-shell 
             :banner="banner"
             :shell_input="send_to_terminal"
             :commands="commands"
@@ -97,9 +97,12 @@
     toggleShell() {
       var sh = document.getElementById("shell");
       var nav = document.getElementById("nav");
+      var shinput = document.getElementById("input-line");
       if (sh.style.display === "none") {
         sh.style.display = "block";
         sh.scrollIntoView();
+        sh.focus();
+        shinput.click();
       } else {
         sh.style.display = "none";
         nav.scrollIntoView();
