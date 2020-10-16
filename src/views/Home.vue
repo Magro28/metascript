@@ -93,10 +93,13 @@
     },
     toggleShell() {
       var sh = document.getElementById("shell");
+      var nav = document.getElementById("nav");
       if (sh.style.display === "none") {
         sh.style.display = "block";
+        sh.scrollIntoView();
       } else {
         sh.style.display = "none";
+        nav.scrollIntoView();
       }
     }
   }
