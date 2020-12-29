@@ -28,7 +28,10 @@
         <a href="https://www.xing.com/profile/Mario_Gross15/cv" target="_blank"><img alt="xing.com" src="./assets/xing-icon.png"></a>
       </column>
        <column><hr></column>
-       <column><hr></column>
+       <column>
+        <hr>
+        <a href="https://www.codewars.com/users/Magro28" target="_blank"><img alt="xing.com" src="https://www.codewars.com/users/Magro28/badges/small"></a>
+       </column>
      </row>
   </div>
 </template>
